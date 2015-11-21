@@ -24,7 +24,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'fatih/vim-go'
 Plugin 'rking/ag.vim'
 Plugin 'kien/ctrlp.vim'
-
+Plugin 'dougireton/vim-chef'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
