@@ -17,6 +17,7 @@ BIRed="\[\033[1;91m\]"        # Red
 
 # User specific aliases and functions
 alias vi='vim'
+alias vit='vim "+NERDTree"'
 alias tree='tree -C'
 
 export EDITOR=vim
