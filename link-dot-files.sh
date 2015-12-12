@@ -1,5 +1,6 @@
 #!/bin/sh
-
-ln -sf ${PWD}/.bashrc ~/.bashrc
-ln -sf ${PWD}/.vimrc ~/.vimrc
-ln -sf ${PWD}/.tmux.conf ~/.tmux.conf
+LINK_ABS_PATH=`realpath $0`
+DOT_PATH=`dirname $LINK_ABS_PATH`
+ln -sf ${DOT_PATH}/.bashrc ~/.bashrc
+ln -sf ${DOT_PATH}/.vimrc ~/.vimrc
+ln -sf ${DOT_PATH}/.tmux.conf ~/.tmux.conf
