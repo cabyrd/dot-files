@@ -19,6 +19,7 @@ BIRed="\[\033[1;91m\]"        # Red
 alias vi='vim'
 alias vit='vim "+NERDTree"'
 alias tree='tree -C'
+alias c='clear'
 
 export EDITOR=vim
 export PS1='$(git branch &>/dev/null;\
@@ -36,3 +37,9 @@ export PS1='$(git branch &>/dev/null;\
         echo "[\u@\h \W]\\$ "; \
     fi)'
 
+if [ -d $HOME/.bash-env ]; then 
+  for f in $HOME/.bash-env/*
+  do
+    . $f
+  done
+fi
