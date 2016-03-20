@@ -64,8 +64,8 @@ set expandtab
 set smarttab
 set shiftwidth=2
 set tabstop=2
-
 set laststatus=2
+set encoding=utf-8
 
 "NERDTree Config
 let NERDTreeShowHidden=1
