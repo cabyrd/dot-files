@@ -47,7 +47,7 @@ set rtp+=/usr/share/vim/site
 
 syntax enable
 set background=dark
-colorscheme solarized
+silent! colorscheme solarized
 
 set noswapfile
 
