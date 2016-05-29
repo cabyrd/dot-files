@@ -1,19 +1,45 @@
-# .bashrc
+#!/usr/bin/env bash
 
 # Source global definitions
 if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
+    . /etc/bashrc
 fi
 
-source /usr/share/git-core/contrib/completion/git-prompt.sh
+# Path to the bash it configuration
+export BASH_IT="$HOME/.bash_it"
 
-Color_Off="\[\033[0m\]"       # Text Reset
-Green="\[\033[0;32m\]"        # Green
-BYellow="\[\033[1;33m\]"      # Yellow
-BIRed="\[\033[1;91m\]"        # Red
+# Lock and Load a custom theme file
+# location /.bash_it/themes/
+#export BASH_IT_THEME='bobby'
+export BASH_IT_THEME='powerline'
 
-# Uncomment the following line if you don't like systemctl's auto-paging feature:
-# export SYSTEMD_PAGER=
+# (Advanced): Change this to the name of your remote repo if you
+# cloned bash-it with a remote other than origin such as `bash-it`.
+# export BASH_IT_REMOTE='bash-it'
+
+# Your place for hosting Git repos. I use this for private repos.
+export GIT_HOSTING='git@git.domain.com'
+
+# Don't check mail when opening terminal.
+unset MAILCHECK
+
+# Change this to your console based IRC client of choice.
+export IRC_CLIENT='irssi'
+
+# Set this to the command you use for todo.txt-cli
+export TODO="t"
+
+# Set this to false to turn off version control status checking within the prompt for all themes
+export SCM_CHECK=true
+
+# Set vcprompt executable path for scm advance info in prompt (demula theme)
+# https://github.com/xvzf/vcprompt
+#export VCPROMPT_EXECUTABLE=~/.vcprompt/bin/vcprompt
+
+export EDITOR=vim
+
+# Load Bash It
+source $BASH_IT/bash_it.sh
 
 # User specific aliases and functions
 alias vi='vim'
@@ -21,25 +47,6 @@ alias vit='vim "+NERDTree"'
 alias tree='tree -C'
 alias c='clear'
 
-export EDITOR=vim
-export PS1='$(git branch &>/dev/null;\
-    if [ $? -eq 0 ]; then \
-        echo "$(echo `git status` | grep "nothing to commit" > /dev/null 2>&1; \
-        if [ "$?" -eq "0" ]; then \
-            # @4 - Clean repository - nothing to commit
-            echo "[\u@\h'$Green'"$(__git_ps1 " (%s)"); \
-        else \
-            # @5 - Changes to working tree
-            echo "[\u@\h'$BIRed'"$(__git_ps1 " {%s}"); \
-        fi) '$BYellow\\W$Color_Off']\$ "; \
-    else \
-        # @2 - Prompt when not in GIT repo
-        echo "[\u@\h \W]\\$ "; \
-    fi)'
+#Remap caps <--> ctrl
+setxkbmap -layout us -option ctrl:nocaps
 
-if [ -d $HOME/.bash-env ]; then 
-  for f in $HOME/.bash-env/*
-  do
-    . $f
-  done
-fi

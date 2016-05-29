@@ -14,9 +14,11 @@ Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'morhetz/gruvbox'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
+Plugin 'sirver/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
@@ -46,6 +48,7 @@ set rtp+=/usr/share/vim/site
 
 syntax enable
 set background=dark
+let g:solarized_termtrans = 1
 silent! colorscheme solarized
 
 set noswapfile
@@ -64,6 +67,7 @@ set expandtab
 set smarttab
 set shiftwidth=2
 set tabstop=2
+
 set laststatus=2
 set encoding=utf-8
 
