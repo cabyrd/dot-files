@@ -13,6 +13,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-dispatch'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'morhetz/gruvbox'
 Plugin 'scrooloose/nerdtree'
@@ -26,6 +27,7 @@ Plugin 'fatih/vim-go'
 Plugin 'rking/ag.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'dougireton/vim-chef'
+Plugin 'ntpeters/vim-better-whitespace'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -73,6 +75,7 @@ set encoding=utf-8
 
 "NERDTree Config
 let NERDTreeShowHidden=1
+let NERDTreeIgnore = ['\.pyc$']
 
 "Syntastic Config
 set statusline+=%#warningmsg#
@@ -83,11 +86,14 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-"let g:syntastic_ruby_checkers = ['rubocop']
-
+let g:syntastic_ruby_checkers = ['rubocop']
 
 "IndentGuide Configuration
 let g:indent_guides_guide_size=1
+
+"Vim-Go Settings
+let g:go_fmt_command = "goimports"
+let g:go_metalinter_autosave = 1
 
 "Force markdown for .md filetype
 autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
