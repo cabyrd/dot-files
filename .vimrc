@@ -21,6 +21,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/syntastic'
 Plugin 'sirver/ultisnips'
 Plugin 'honza/vim-snippets'
+Plugin 'majutsushi/tagbar'
 Plugin 'ekalinin/Dockerfile.vim'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'fatih/vim-go'
@@ -97,3 +98,6 @@ let g:go_metalinter_autosave = 1
 
 "Force markdown for .md filetype
 autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+
+"Tagbar F9 map
+nnoremap <silent> <F9> :TagbarToggle<CR>
