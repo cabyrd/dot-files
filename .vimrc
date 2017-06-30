@@ -29,6 +29,7 @@ Plugin 'rking/ag.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'dougireton/vim-chef'
 Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'moll/vim-node'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -87,6 +88,12 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+if executable('node_modules/.bin/eslint')
+  let g:syntastic_javascript_checkers = ['eslint']
+  let b:syntastic_javascript_eslint_exec = 'node_modules/.bin/eslint'
+endif
+
 let g:syntastic_ruby_checkers = ['rubocop']
 
 "IndentGuide Configuration
@@ -95,6 +102,15 @@ let g:indent_guides_guide_size=1
 "Vim-Go Settings
 let g:go_fmt_command = "goimports"
 let g:go_metalinter_autosave = 1
+let g:go_metalinter_autosave_enabled = ['vet', 'golint']
+let g:go_metalinter_deadline = "10s"
+let g:go_list_type = "quickfix"
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
 
 "Force markdown for .md filetype
 autocmd BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
