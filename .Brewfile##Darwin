@@ -1,6 +1,22 @@
 tap "homebrew/bundle"
 tap "homebrew/core"
+tap caskroom/cask
 
-brew install direnv
-brew install git
-brew install jq
+brew curl
+brew direnv
+brew git
+brew gnupg
+brew groovy
+brew jq
+brew kompose
+brew terraform
+brew the_silver_searcher
+brew tmuxinator
+brew wget
+
+
+cask 'atom'
+cask 'firefox'
+cask 'google-chrome'
+cask 'postman'
+cask 'visual-studio-code'
