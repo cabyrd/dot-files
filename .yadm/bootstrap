@@ -27,9 +27,12 @@ fi
 #
 if [ "$system_type" = "Linux" ]; then
 
-  distro = $(grep -Po "(?<=^NAME=).*" /etc/os-release |  tr '[:upper:]' '[:lower:]')
+  distro=$(grep -Po "(?<=^NAME=).*" /etc/os-release |  tr '[:upper:]' '[:lower:]')
   if [ "$distro" = "fedora" ]; then
     sudo ~/.bootstrap/fedora/system-packages.sh
   fi
 
 fi
+
+sudo ~/.bootstrap/generic/bashit.sh
+sudo ~/.bootstrap/generic/vim.sh
