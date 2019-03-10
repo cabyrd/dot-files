@@ -1,0 +1,6 @@
+tap "homebrew/bundle"
+tap "homebrew/core"
+
+brew install direnv
+brew install git
+brew install jq

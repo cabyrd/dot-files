@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+
+system_type=$(uname -s)
+
+
+# ---------------------------------------------------------------------------
+# OS X Darwin / Macbook Pro
+# ---------------------------------------------------------------------------
+#
+if [ "$system_type" = "Darwin" ]; then
+
+  if ! command -v brew >/dev/null 2>&1; then
+    echo "--- Installing homebrew ..."
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  fi
+
+  if [ -f "$HOME/.Brewfile" ]; then
+    echo "--- Updating homebrew bundle ..."
+    brew bundle --global
+  fi
+
+fi
+
+# ---------------------------------------------------------------------------
+# Linux / Fedora
+# ---------------------------------------------------------------------------
+#
+if [ "$system_type" = "Linux" ]; then
+
+  distro = $(grep -Po "(?<=^NAME=).*" /etc/os-release |  tr '[:upper:]' '[:lower:]')
+  if [ "$distro" = "fedora" ]; then
+    sudo ~/bootstrap/fedora/system-packages.sh
+
+  fi
+
+fi
