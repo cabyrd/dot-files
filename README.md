@@ -1,9 +1,9 @@
 # dot-files
-Basic set of dot-files for the following tools.  Some paths are likely
-to be specific to fedora packages.
+Use yadm to setup config and bootstrap systems in the following manner:
 
-### bash
-.bashrc assumes the use of [bash-it](https://github.com/Bash-it/bash-it)
-
-### vim
-### tmux
+```
+git clone https://github.com/TheLocehiliosan/yadm.git ~/.yadm-project
+ln -s ~/.yadm-project/yadm ~/bin/yadm
+export PATH=$PATH:~/bin
+yadm clone <dot-file-repo>
+```
