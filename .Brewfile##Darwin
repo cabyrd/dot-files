@@ -9,6 +9,7 @@ brew gnupg
 brew groovy
 brew jq
 brew kompose
+brew python3
 brew terraform
 brew the_silver_searcher
 brew tmuxinator
@@ -18,5 +19,6 @@ brew wget
 cask 'atom'
 cask 'firefox'
 cask 'google-chrome'
+cask 'iterm2'
 cask 'postman'
 cask 'visual-studio-code'
