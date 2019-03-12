@@ -20,7 +20,7 @@ if [ "$system_type" = "Darwin" ]; then
   fi
 
 
-  ~/.bootstrap/darwin/awscli.sh
+  ~/.bootstrap/darwin/aws-mfa.sh
 fi
 
 # ---------------------------------------------------------------------------
