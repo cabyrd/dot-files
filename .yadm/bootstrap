@@ -19,6 +19,8 @@ if [ "$system_type" = "Darwin" ]; then
     brew bundle --global
   fi
 
+
+  ~/.bootstrap/darwin/awscli.sh
 fi
 
 # ---------------------------------------------------------------------------
