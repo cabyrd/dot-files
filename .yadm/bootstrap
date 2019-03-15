@@ -33,8 +33,9 @@ if [ "$system_type" = "Linux" ]; then
   if [ "$distro" = "fedora" ]; then
     sudo ~/.bootstrap/fedora/system-packages.sh
     sudo ~/.bootstrap/fedora/rpmfusion.sh
-
     sudo dnf update -y
+
+    sudo ~/.bootstrap/fedora/vscode.sh
   fi
 
 fi
