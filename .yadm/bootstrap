@@ -36,9 +36,10 @@ if [ "$system_type" = "Linux" ]; then
     sudo dnf update -y
 
     sudo ~/.bootstrap/fedora/vscode.sh
+    ~/.bootstrap/generic/vscode-install-extensions.sh
   fi
 
 fi
 
-sudo ~/.bootstrap/generic/bashit.sh
-sudo ~/.bootstrap/generic/vim.sh
+~/.bootstrap/generic/bashit.sh
+~/.bootstrap/generic/vim.sh

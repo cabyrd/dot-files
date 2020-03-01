@@ -1,0 +1,10 @@
+eamodio.gitlens
+ms-azuretools.vscode-docker
+ms-python.python
+ms-vscode.Go
+redhat.java
+redhat.vscode-yaml
+sdras.night-owl
+ThreadHeap.serverless-ide-vscode
+vscjava.vscode-spring-initializr
+vscodevim.vim
