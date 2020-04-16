@@ -37,6 +37,9 @@ if [ "$system_type" = "Linux" ]; then
 
     sudo ~/.bootstrap/fedora/vscode.sh
     ~/.bootstrap/generic/vscode-install-extensions.sh
+
+    sudo ~/.bootstrap/fedora/virtualbox.sh
+    sudo ~/.bootstrap/fedora/minikube.sh
   fi
 
 fi
