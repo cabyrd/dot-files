@@ -6,14 +6,8 @@
 
 pushd $PWD
 
-# Install kubectl
-if [ ! -f /etc/yum.repos.d/kubernetes.repo ]; then
-  sudo cp ~/.bootstrap/fedora/kubernetes.repo /etc/yum.repos.d/kubernetes.repo  
-fi
-
 sudo dnf update -y
 sudo dnf install -y kubectl
-
 
 #Install minikube
 if which minikube; then
