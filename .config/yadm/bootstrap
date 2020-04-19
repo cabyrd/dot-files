@@ -39,6 +39,11 @@ if [ "$system_type" = "Linux" ]; then
     ~/.bootstrap/generic/vscode-install-extensions.sh
 
     sudo ~/.bootstrap/fedora/virtualbox.sh
+
+
+    if [ ! -f /etc/yum.repos.d/kubernetes.repo ]; then
+      sudo cp ~/.bootstrap/fedora/kubernetes.repo /etc/yum.repos.d/kubernetes.repo
+    fi
     sudo ~/.bootstrap/fedora/minikube.sh
   fi
 
