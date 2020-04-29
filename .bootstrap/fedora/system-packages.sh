@@ -12,6 +12,7 @@ sudo dnf install -y bash-completion     \
                     gcc-c++             \
                     golang              \
                     gpg                 \
+                    hugo                \
                     keepassxc           \
                     make                \
                     patch               \
