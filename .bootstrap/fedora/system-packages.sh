@@ -18,6 +18,7 @@ sudo dnf install -y bash-completion     \
                     pipenv              \
                     podman              \
                     powerline           \
+                    powertop            \
                     restic              \
                     task                \
                     the_silver_searcher \
