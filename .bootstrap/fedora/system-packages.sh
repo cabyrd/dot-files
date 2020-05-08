@@ -12,12 +12,14 @@ sudo dnf install -y bash-completion     \
                     gcc-c++             \
                     golang              \
                     gpg                 \
+                    hugo                \
                     keepassxc           \
                     make                \
                     patch               \
                     pipenv              \
                     podman              \
                     powerline           \
+                    powertop            \
                     restic              \
                     task                \
                     the_silver_searcher \
