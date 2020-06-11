@@ -1,4 +1,5 @@
 eamodio.gitlens
+hashicorp.terraform
 ms-azuretools.vscode-docker
 ms-python.python
 ms-vscode.Go
