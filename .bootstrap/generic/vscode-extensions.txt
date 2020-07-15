@@ -2,6 +2,7 @@ eamodio.gitlens
 golang.Go
 hashicorp.terraform
 ms-azuretools.vscode-docker
+ms-kubernetes-tools.vscode-kubernetes-tools
 ms-python.python
 zxh404.vscode-proto3
 redhat.java
