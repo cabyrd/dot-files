@@ -1,0 +1,37 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+
+export EDITOR=vim
+
+alias vi='vim'
+alias vit='vim "+NERDTree"'
+alias tree='tree -C'
+alias c='clear'
+
+complete -C '~/.local/bin/aws_completer' aws
+
+#Remap caps <--> ctrl
+setxkbmap -layout us -option ctrl:nocaps
+
+eval "$(starship init bash)"
+eval "$(direnv hook bash)"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/chris/.sdkman"
+[[ -s "/home/chris/.sdkman/bin/sdkman-init.sh" ]] && source "/home/chris/.sdkman/bin/sdkman-init.sh"
