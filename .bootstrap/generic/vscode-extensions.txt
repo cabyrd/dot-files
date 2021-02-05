@@ -11,3 +11,4 @@ sdras.night-owl
 ThreadHeap.serverless-ide-vscode
 vscjava.vscode-spring-initializr
 vscodevim.vim
+njpwerner.autodocstring
