@@ -30,7 +30,7 @@ fi
 if [ "$system_type" = "Linux" ]; then
 
   distro=$(grep -Po "(?<=^NAME=).*" /etc/os-release |  tr '[:upper:]' '[:lower:]')
-  if [ "$distro" = "fedora linux" ]; then
+  if [ "$distro" = '"fedora linux"' ]; then
     sudo ~/.bootstrap/fedora/system-packages.sh
     sudo ~/.bootstrap/fedora/rpmfusion.sh
     sudo dnf update -y
