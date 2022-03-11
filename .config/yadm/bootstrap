@@ -18,9 +18,6 @@ if [ "$system_type" = "Darwin" ]; then
     echo "--- Updating homebrew bundle ..."
     brew bundle --global
   fi
-
-
-  ~/.bootstrap/darwin/aws-mfa.sh
 fi
 
 # ---------------------------------------------------------------------------
