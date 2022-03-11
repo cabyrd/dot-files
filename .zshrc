@@ -30,10 +30,13 @@ alias vit='vim "+NERDTree"'
 alias tree='tree -C'
 alias c='clear'
 alias cat='bat'
-alias ll='ls -alh'
+alias ls='ls -G'
+alias ll='ls -alhG'
 
 eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"
+
+autoload -z compinit && compinit
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
