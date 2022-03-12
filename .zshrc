@@ -36,7 +36,7 @@ alias ll='ls -alhG'
 eval "$(direnv hook zsh)"
 eval "$(starship init zsh)"
 
-autoload -z compinit && compinit
+autoload -z compinit && compinit -i
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
